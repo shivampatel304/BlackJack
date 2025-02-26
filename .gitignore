@@ -1,0 +1,10 @@
+# backend
+backend/node_modules/
+backend/package-lock.json
+backend/dist/
+backend/tsconfig.tsbuildinfo
+
+# frontend
+frontend/node_modules/
+frontend/eslint.config.json
+frontend/package-lock.json

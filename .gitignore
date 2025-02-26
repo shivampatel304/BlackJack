@@ -6,5 +6,5 @@ backend/tsconfig.tsbuildinfo
 
 # frontend
 frontend/node_modules/
-frontend/eslint.config.json
+frontend/eslint.config.js
 frontend/package-lock.json

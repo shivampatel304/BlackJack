@@ -1,5 +1,5 @@
 import { WebSocket } from "ws";
-import { handleJoinUser, handleLeaveUser } from "../controllers/roomController";
+import { handleJoinUser, handleLeaveUser, startGame } from "../controllers/roomController";
 
 export function handleMessage(socket: WebSocket, data: any) {
   try {
@@ -9,6 +9,8 @@ export function handleMessage(socket: WebSocket, data: any) {
       handleJoinUser(socket, message);
     } else if (message.type === "leave") {
       handleLeaveUser(socket, message);
+    } else if (message.type === "start"){
+      startGame(socket,message);
     }
   } catch (error) {
     console.error("Invalid message format:", error);

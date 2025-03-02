@@ -1,17 +1,22 @@
 import { WebSocket } from "ws"
 
-interface User {
+export interface User {
     userId: number;
     name: string;
     socket: WebSocket;
-    cards?: any[];
+    game?: Cards;
 }
 
 interface Room {
     players: User[];
     deck: any[];
-    dealer: { cards: any[]};
+    dealer: { cards: any[], points: number};
     status: "waiting" | "dealing" | "playing"
+}
+
+export interface Cards {
+    cards: any[],
+    points: number;
 }
 
 export const rooms: { [roomId: number]: Room } = {};
